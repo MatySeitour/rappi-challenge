@@ -1,28 +1,12 @@
-import { useState } from "react";
-import "../public/styles.css"
+import { useParams } from "react-router-dom"
+import callCategories from "../src/api/categories.json"
 
 function Categories(){
-    const [categoriesList, setCategoriesList] = useState(false);
-    console.log(categoriesList)
-    if(!categoriesList){
-        return[
-            <li onClick={() => setCategoriesList(prevState => !prevState)} className="nav-mobile__items">Categories</li>
-        ]
-    }
-    else{
-        return[
-            <li onClick={() => setCategoriesList(prevState => !prevState)} className="nav-mobile__items">Categories</li>,
-            <div className="list-categories">
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-                <li>aaaaaaaa</li>
-            </div>
-        ]
-    }
+    console.log(callCategories.categories)
+    const {id} = useParams()
+    return[
+        <p>{id}</p>
+    ]
 }
 
-export {Categories};
+export {Categories}

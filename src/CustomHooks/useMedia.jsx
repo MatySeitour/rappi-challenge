@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { useLayoutEffect } from "react";
 
 function useMedia(query){
-    const [matches, setMatches] = useState(false)
+    
+    const [matches, setMatches] = useState(true)
     const canUseOM = () => !!(typeof window !== "undefined" && window.document && window.document.createElement);
 
     const useSafeLayoutEffect = canUseOM() ? useLayoutEffect : useEffect;

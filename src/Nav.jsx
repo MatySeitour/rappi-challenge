@@ -8,7 +8,7 @@ import { useMedia } from "./CustomHooks/useMedia";
 
 function Nav(){
     const [navState, setNavState] = useState(false);
-    const mobileResponsive = useMedia('(max-width: 500px)');
+    const mobileResponsive = useMedia('(max-width: 760px)');
     const navInfo = [
         {
             id: 1,

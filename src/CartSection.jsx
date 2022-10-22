@@ -59,7 +59,7 @@ function CartSection({setCartSectionState}){
                     {cartItems.map((item) => (
                         <li className="cart-item" key={item.id}>
                             <figure className="cart-img__container">
-                                <img className="cart-img" src="../productImg.jpg" />
+                                <img alt="CocaCola" className="cart-img" src="../productImg.jpg" />
                             </figure>
                             <div className="cart-item__detail">
                                 <h4>{item.name}</h4>

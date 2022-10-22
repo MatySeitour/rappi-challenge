@@ -15,7 +15,7 @@ function ProductCard({setCartItems, productName, productQuantity, productId, pro
                 setCart={setCart}
             />
             <figure className="product-image__container">
-                <img src="../productImg.jpg" className="product-image"/>
+                <img alt="CocaCola" src="../productImg.jpg" className="product-image"/>
             </figure>
             <div className="product-detail__container">
                 <div>

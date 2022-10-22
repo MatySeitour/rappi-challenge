@@ -17,7 +17,7 @@ function Products(){
     ]
 
     const cartContext = useContext(CartContext)
-    const mobileResponsive = useMedia('(max-width: 500px)');
+    const mobileResponsive = useMedia('(max-width: 760px)');
     const {cartItems} = cartContext;
 
     const [available, setAvailable] = useState(() =>{

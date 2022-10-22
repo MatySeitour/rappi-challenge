@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useMedia } from "./CustomHooks/useMedia";
 
 function FilterOptions({setStateProductsOrder ,availableStorage, available, setMinorPrice, setStateMinorPrice, setGreaterPrice, setStateGreaterPrice, setQuantityListState, setStateQuantity, setButtonConfirmed, buttonConfirmed, quantityListState, minorPrice, greaterPrice, setProductsOrder}){
-    const mobileResponsive = useMedia('(max-width: 500px)');
+    const mobileResponsive = useMedia('(max-width: 760px)');
     
     const orderListItems = [
         {

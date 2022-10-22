@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import { useLayoutEffect } from "react";
 
 function useMedia(query){
-    
-    const [matches, setMatches] = useState(true)
+    const mql = window.matchMedia(query)
+    const [matches, setMatches] = useState(mql.matches)
+
     const canUseOM = () => !!(typeof window !== "undefined" && window.document && window.document.createElement);
 
     const useSafeLayoutEffect = canUseOM() ? useLayoutEffect : useEffect;
@@ -13,7 +14,6 @@ function useMedia(query){
         setMatches(mql.matches)
     }
 
-    const mql = window.matchMedia(query)
     useSafeLayoutEffect(() => {
         mql.addEventListener("change", handler)
         return () => mql.removeEventListener("change", handler)
